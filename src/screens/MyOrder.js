@@ -8,7 +8,7 @@ export default function MyOrder() {
   const fetchMyOrder = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/myOrderData",
+        "https://delivery-backend-fcbt.onrender.com/api/auth/myOrderData",
         {
           method: "POST",
           headers: {

@@ -15,12 +15,15 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   const loadFoodItems = async () => {
-    let response = await fetch("http://localhost:5000/api/auth/foodData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      "https://delivery-backend-fcbt.onrender.com/api/auth/foodData",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     response = await response.json();
     setFoodItems(response[0]);
     setFoodCat(response[1]);
